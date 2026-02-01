@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Will you be my Valentine?</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#yes {
+  background: hotpink;
+  color: white;
+}
+
+#no {
+  margin-left: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="box">
+  <h2 id="question">Adheena will you be my valentine? ❤️</h2>
+
+  <button id="yes" onclick="yesClicked()">Yes</button>
+  <button id="no" onmouseover="moveNo()">No</button>
+</div>
+
+<script>
+function yesClicked() {
+  document.getElementById("box").innerHTML =
+    "<h1>YAY!! 🎉❤️</h1><p>Best decision ever 😌</p>";
+}
+
+function moveNo() {
+  const btn = document.getElementById("no");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random()*300 + "px";
+  btn.style.top = Math.random()*300 + "px";
+}
+</script>
+
+</body>
+</html>
